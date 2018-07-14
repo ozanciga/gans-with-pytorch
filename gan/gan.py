@@ -26,7 +26,7 @@ opt = parser.parse_args()
 try:
     import visdom
     vis = visdom.Visdom(server=opt.display_server, port=opt.display_port, raise_exceptions=True) # Create vis env.
-    vis.close(None) # Clear all figs.
+    vis.close(None) # Clear all figures.
 except ImportError:
     vis = None
 
