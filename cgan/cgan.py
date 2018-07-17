@@ -8,8 +8,6 @@ complex networks such as pix2pix or any visual conditional generation system)
 idea of concatenating condition (e.g., labels) to the input to get conditional outputs,
 yet I think has fundamental flaws in designing the architecture.
 '''
-
-
 import argparse
 
 import torch
