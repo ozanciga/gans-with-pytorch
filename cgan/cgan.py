@@ -36,9 +36,10 @@ opt = parser.parse_args()
 try:
     import visdom
     vis = visdom.Visdom(server=opt.display_server, port=opt.display_port, raise_exceptions=True) # Create vis env.
-    vis.close(None) # Clear all figures.
 except ImportError:
     vis = None
+else:
+    vis.close(None) # Clear all figures.
 
 
 img_dims = (opt.channels, opt.img_size, opt.img_size)
