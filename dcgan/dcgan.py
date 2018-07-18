@@ -145,7 +145,6 @@ def custom_data(CIFAR_CLASS = 5): # Only working with dogs.
     output_dir = './data/cifar10'
     cifar = datasets.CIFAR10(root=output_dir, download=True, train=True,
                           transform=compose)
-    # return cifar
 
     # Our custom cifar with a single category.
     Tensor__ = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
