@@ -12,6 +12,7 @@ not using BN at the first layer of discriminator which I found to not matter.
 However, I noticed irregular behavior when BN is not used, such as sudden drops in error.
 '''
 
+
 import argparse
 import os
 
