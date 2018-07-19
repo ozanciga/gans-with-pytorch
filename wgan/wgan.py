@@ -9,6 +9,7 @@ A: Kind of. I would say having a steadily decreasing loss is nice, but it's not 
 Q: Is it possible to train a stable network without batch normalization, as claimed?
 A: Sort of, batch norm still makes things way faster. Also, there is this practice of
 not using BN at the first layer of discriminator which I found to not matter.
+However, I noticed irregular behavior when BN is not used, such as sudden drops in error.
 '''
 
 import argparse
