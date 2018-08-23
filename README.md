@@ -49,7 +49,8 @@ more than 60-70% of the time.
 SRGAN
 -------------
 ### pix2pix
-**_[Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004)_**
+> **_[Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004)_** 
+
 [[Code](https://github.com/ozanciga/gans-with-pytorch/tree/master/pix2pix)]
 
 **_Quick summary_**: Use a reference image (can be a annotation mask, a natural scene image that we want to turn the daytime into night, or even sketches of shoes), and change it to a target image. Here, we see the labels of roads, buildings, people etc turned into actual cityscapes just from crude and undetailed simple color masks. 
@@ -75,7 +76,7 @@ takes a long time.
 
 
 ### srgan
-**[Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/abs/1609.04802)**
+> **[Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/abs/1609.04802)**
 <center><img src="https://cdn-images-1.medium.com/max/1800/1*zsiBj3IL4ALeLgsCeQ3lyA.png" alt="Network architecture" /></center>
 
 Quick summary: Increase the resolution of images.
