@@ -21,6 +21,14 @@ Generative adversarial networks using Pytorch
 [![Chat at https://gitter.im/python/typing](https://badges.gitter.im/python/typing.svg)](https://gitter.im/python/typing?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 
+Ok but why? 
+----------------------------------
+
+Any help in testing, development, documentation and other tasks is
+highly appreciated and useful to the project. There are tasks for
+contributors of all experience levels. If you're just getting started,
+ask on the [gitter chat](https://gitter.im/python/typing) for ideas of good
+beginner issues.
 
 Setting it up 
 ----------------------------------
@@ -37,14 +45,6 @@ For dataset, I provide either scripts or links. Although I prefer using datasets
 Pytorch whenever I can for simplicity, there is only so much you can do with digits or CIFAR images. Still, I stick to 
 previously used datasets to cut off my implementation time, where the data acquisition and preparation takes easily 
 more than 60-70% of the time.
-
-- [mypy tracker](https://github.com/python/mypy/issues)
-  for mypy issues
-- [typeshed tracker](https://github.com/python/typeshed/issues)
-  for issues with specific modules
-- [typing tracker](https://github.com/python/typing/issues)
-  for discussion of new type system features (PEP 484 changes) and
-  runtime bugs in the typing module
 
 SRGAN
 -------------
@@ -149,37 +149,6 @@ programs, even if they have type errors:
 
 [statically typed parts]: http://mypy.readthedocs.io/en/latest/basics.html#function-signatures
 
-
-IDE & Linter Integrations
--------------------------
-
-Mypy can be integrated into popular IDEs:
-
-* Vim: [vim-mypy](https://github.com/Integralist/vim-mypy)
-* Emacs: using [Flycheck](https://github.com/flycheck/) and [Flycheck-mypy](https://github.com/lbolla/emacs-flycheck-mypy)
-* Sublime Text: [SublimeLinter-contrib-mypy](https://github.com/fredcallaway/SublimeLinter-contrib-mypy)
-* Atom: [linter-mypy](https://atom.io/packages/linter-mypy)
-* PyCharm: [mypy plugin](https://github.com/dropbox/mypy-PyCharm-plugin) (PyCharm integrates [its own implementation of PEP 484](https://www.jetbrains.com/help/pycharm/type-hinting-in-product.html))
-* VS Code: provides [basic integration](https://code.visualstudio.com/docs/python/linting#_mypy) with mypy.
-
-Mypy can also be integrated into [Flake8] using [flake8-mypy].
-
-[Flake8]: http://flake8.pycqa.org/
-[flake8-mypy]: https://github.com/ambv/flake8-mypy
-
-
-Web site and documentation
---------------------------
-
-Documentation and additional information is available at the web site:
-
-  http://www.mypy-lang.org/
-
-Or you can jump straight to the documentation:
-
-  http://mypy.readthedocs.io/
-
-
 Troubleshooting
 ---------------
 
@@ -210,103 +179,3 @@ In Windows, the script is generally installed in
 
     C:\>\Python34\python \Python34\Scripts\mypy PROGRAM
 
-### Working with `virtualenv`
-
-If you are using [`virtualenv`](https://virtualenv.pypa.io/en/stable/),
-make sure you are running a python3 environment. Installing via `pip3`
-in a v2 environment will not configure the environment to run installed
-modules from the command line.
-
-    $ python3 -m pip install -U virtualenv
-    $ python3 -m virtualenv env
-
-
-Quick start for contributing to mypy
-------------------------------------
-
-If you want to contribute, first clone the mypy git repository:
-
-    $ git clone --recurse-submodules https://github.com/python/mypy.git
-
-If you've already cloned the repo without `--recurse-submodules`,
-you need to pull in the typeshed repo as follows:
-
-    $ git submodule init
-    $ git submodule update
-
-Either way you should now have a subdirectory `typeshed` containing a
-clone of the typeshed repo (`https://github.com/python/typeshed`).
-
-From the mypy directory, use pip to install mypy:
-
-    $ cd mypy
-    $ python3 -m pip install -U .
-
-Replace `python3` with your Python 3 interpreter.  You may have to do
-the above as root. For example, in Ubuntu:
-
-    $ sudo python3 -m pip install -U .
-
-Now you can use the `mypy` program just as above.  In case of trouble
-see "Troubleshooting" above.
-
-
-Working with the git version of mypy
-------------------------------------
-
-mypy contains a submodule, "typeshed". See http://github.com/python/typeshed.
-This submodule contains types for the Python standard library.
-
-Due to the way git submodules work, you'll have to do
-```
-  git submodule update typeshed
-```
-whenever you change branches, merge, rebase, or pull.
-
-(It's possible to automate this: Search Google for "git hook update submodule")
-
-
-Tests
------
-
-See [Test README.md](test-data/unit/README.md)
-
-
-Development status
-------------------
-
-Mypy is alpha software, but it has already been used in production
-for well over a year at Dropbox, and it has an extensive test suite.
-
-See [the roadmap](ROADMAP.md) if you are interested in plans for the
-future.
-
-
-Issue tracker
--------------
-
-Please report any bugs and enhancement ideas using the mypy issue
-tracker:
-
-  https://github.com/python/mypy/issues
-
-Feel free to also ask questions on the tracker.
-
-
-Help wanted
------------
-
-Any help in testing, development, documentation and other tasks is
-highly appreciated and useful to the project. There are tasks for
-contributors of all experience levels. If you're just getting started,
-ask on the [gitter chat](https://gitter.im/python/typing) for ideas of good
-beginner issues.
-
-For more details, see the file [CONTRIBUTING.md](CONTRIBUTING.md).
-
-
-License
--------
-
-Mypy is licensed under the terms of the MIT License (see the file
-LICENSE).
