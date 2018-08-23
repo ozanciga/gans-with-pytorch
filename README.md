@@ -1,4 +1,6 @@
-<img src="https://pytorch.org/static/img/logos/pytorch-logo-dark.png" alt="mypy logo" width="300px"/>
+<div align="center">
+  <img width="300px" src="https://pytorch.org/static/img/logos/pytorch-logo-dark.png" alt="gans with pytorch"/>
+</div>
 
 Generative adversarial networks using Pytorch
 =======================================
